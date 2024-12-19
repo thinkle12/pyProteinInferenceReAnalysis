@@ -1,0 +1,31 @@
+parameters:
+  general:
+    export: peptides
+    fdr: 0.01
+    picker: False # Dont run picker
+    tag: inclusion_up
+  data_restriction:
+    pep_restriction: False
+    peptide_length_restriction: 6
+    q_value_restriction: False
+    custom_restriction: None
+  score:
+    protein_score: multiplicative_log
+    psm_score: posterior_error_prob
+    psm_score_type: multiplicative
+  identifiers:
+    decoy_symbol: "DECOY_"
+    isoform_symbol: "-"
+    reviewed_identifier_symbol: "sp|"
+  inference:
+    inference_type: inclusion
+    grouping_type: None
+  digest:
+    digest_type: trypsin
+    missed_cleavages: 2
+  parsimony:
+    lp_solver: None
+    glpk_path: None
+    shared_peptides: all
+  peptide_centric:
+    max_identifiers: 10
